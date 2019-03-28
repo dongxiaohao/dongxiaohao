@@ -1,0 +1,27 @@
+package graph_test;
+
+public class GraphLink_test {
+	int adjvex;
+	int weight;
+	GraphLink_test next;
+	//无权图
+	public GraphLink_test(int adj,GraphLink_test nt){
+		this.adjvex=adj;
+		this.next=nt;
+		this.weight=1;
+	}
+	//有权图
+	public GraphLink_test(int adj,int wgt,GraphLink_test nt){
+		this.adjvex=adj;
+		this.weight=wgt;
+		this.next=nt;
+	}
+   public void bianli(GraphLink_test[] a){
+	   		for(int i=0;i<a.length;i++) {
+			GraphLink_test flag=a[i];
+			while(flag!=null) {
+			 System.out.println(i+" "+flag.adjvex+" "+flag.weight);
+		}
+		}
+   }
+}
