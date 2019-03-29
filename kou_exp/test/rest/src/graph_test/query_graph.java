@@ -108,8 +108,8 @@ public class query_graph {
 			  for(int j=0;j<scale;j++) {
 				  if(n_m[i][j]!=0) {												//寻找到度不为零的节点
 					  int pre_lable=this.query_lable.getlable(i);					//得到当前节点的标签
-					  if(big_test01.graph_lable.lable_count[pre_lable]<min_degree) {		//判断大图中对应类型的节点是否为当前最小
-						  min_degree=big_test01.graph_lable.lable_count[pre_lable];
+					  if(big_test01.graph_lable.getCount(pre_lable)<min_degree) {		//判断大图中对应类型的节点是否为当前最小
+						  min_degree=big_test01.graph_lable.getCount(pre_lable);
 						  min_node=i;
 					  }
 					  break;						//跳出当前循环

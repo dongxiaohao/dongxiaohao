@@ -3,8 +3,8 @@ package lables;
 import java.util.List;
 
 public class lables {
-	public int[] lable;								// 将标签存入对应的节点标签对应位
-	public int[] lable_count;							//统计每类标签的数量
+	private int[] lable;								// 将标签存入对应的节点标签对应位
+	private int[] lable_count;							//统计每类标签的数量
 	//List<Integer> lable_classification;		
 	public lables(int length,int count) {
 		this.lable=new int[length];
@@ -20,6 +20,9 @@ public class lables {
 	public int getlable(int flag){
 		return this.lable[flag];
 		
+	}
+	public int getCount(int flag) {
+		return this.lable_count[flag];
 	}
 
 }
